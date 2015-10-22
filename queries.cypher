@@ -17,3 +17,9 @@ RETURN p
 MATCH (kevin:actor {actorName:"Kevin Bacon" }),(bill:actor { actorName:"Bill Murray" }),
   p = allShortestPaths((kevin)-[:appears_in*..15]-(bill))
 RETURN p
+
+//3 actor overlap
+MATCH (steve:actor {actorName:'Steve Carell'})-[s:appears_in]->(),
+	(will:actor { actorName:'Will Ferrell'})-[w:appears_in]->(),
+	(paul:actor { actorName:'Paul Rudd'})-[p:appears_in]->()
+RETURN s, w, p;
