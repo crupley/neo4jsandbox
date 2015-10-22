@@ -23,3 +23,10 @@ MATCH (steve:actor {actorName:'Steve Carell'})-[s:appears_in]->(),
 	(will:actor { actorName:'Will Ferrell'})-[w:appears_in]->(),
 	(paul:actor { actorName:'Paul Rudd'})-[p:appears_in]->()
 RETURN s, w, p;
+
+//movies with all three actors
+MATCH (steve:actor {actorName:'Steve Carell'})-[s:appears_in]->(),
+	(will:actor { actorName:'Will Ferrell'})-[w:appears_in]->(),
+	(paul:actor { actorName:'Paul Rudd'})-[p:appears_in]->()
+RETURN s, w, p;
+
