@@ -2,6 +2,18 @@
 import numpy as np
 import pandas as pd
 
+# toy example
+# make files:
+
+# ex_edges = pd.read_table('~/gal/w7/graphs/data/example_edges.tsv', sep='\t',
+# 						 header=None)
+# ex_edges.columns = ['actor', 'movie']
+
+
+
+
+
+
 # make movie list
 me = pd.read_table('~/gal/w7/graphs/data/imdb_edges.tsv', sep='\t')
 print me.head()
