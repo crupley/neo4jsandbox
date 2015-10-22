@@ -27,3 +27,6 @@ movielist.to_csv('data/movies.csv', sep=',', columns=['name'], index=False)
 
 # make connections csv
 me.to_csv('data/imdb_edges.csv', sep=',', index=False)
+
+# find movies
+movielist[movielist.name.str.match('Lord').fillna(False)]
