@@ -1,6 +1,5 @@
 
 //Create actors
-
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "file:///Users/crupley/DS/projects/neo4jsandbox/data/actors.csv" AS row
 CREATE (:actor {actorName: row.name});
@@ -9,6 +8,11 @@ CREATE (:actor {actorName: row.name});
 USING PERIODIC COMMIT
 LOAD CSV WITH HEADERS FROM "file:///Users/crupley/DS/projects/neo4jsandbox/data/movies.csv" AS row
 CREATE (:movie {movieName: row.name});
+
+//Indices
+CREATE INDEX ON :actor(actorName);
+CREATE INDEX ON :movie(movieName);
+
 
 // Create connections
 USING PERIODIC COMMIT
