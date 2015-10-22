@@ -11,3 +11,7 @@ print movielist.shape
 
 movielist = pd.DataFrame(movielist, columns = ['name'])
 movielist.to_csv('data/movies.csv', sep=',', columns=['name'], index=False)
+
+
+# make connections csv
+me.to_csv('data/imdb_edges.csv', sep=',', index=False)
